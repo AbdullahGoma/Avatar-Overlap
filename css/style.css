@@ -248,16 +248,18 @@
     bottom: -40px;
     left: 40%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: var(--clr-accent-2);
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.8rem;
+    font-weight: 700;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 200ms;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     pointer-events: none;
     z-index: 10;
+    color: var(--clr-primary);
   }
 
   .avatar-container:hover .avatar-name {
@@ -268,6 +270,7 @@
   .avatar-container:hover .avatar {
     transform: scale(2);
     z-index: 5;
+    border: 5px solid var(--clr-accent-2);
   }
 
   /* Adjacent avatar effects */

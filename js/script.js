@@ -81,3 +81,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   container.addEventListener("touchend", stopScroll);
 });
+
+document.querySelectorAll(".avatar-container").forEach((el, index, arr) => {
+  // Set initial z-index based on the order
+  el.style.zIndex = arr.length - index;
+
+  el.addEventListener("mouseenter", () => {
+    // Prevent the z-index update while hovering
+    el.style.zIndex = 100; // Optionally set to a very high value when hovering
+  });
+
+  el.addEventListener("mouseleave", () => {
+    // Restore the original z-index after hover ends
+    el.style.zIndex = arr.length - index;
+  });
+});
